@@ -1,12 +1,14 @@
 <h2><%= @task.title %></h2>
 
 <div class="card">
-  <p><%= @task.detail %></p>
+  <div class="card-body">
+    <p><%= @task.detail %></p>
+  </div>
 </div>
 
 
 <div class="completed">
-  <p><%= @task.completed ? "✅ This task is completed." : "❎ This task is not yet completed." %></p>
+  <p><%= @task.completed ? "✅  This task is completed." : "❎  This task is not yet completed." %></p>
 </div>
 
 <p><%= link_to "Update the task", edit_task_path(@task) %></p>

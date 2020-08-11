@@ -1,13 +1,4 @@
 <h2>Edit your new task here</h2>
-
-<%= form_for(@task) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :detail %>
-  <%= f.text_field :detail %>
-  <%= f.label :completed %>
-  <%= f.check_box :completed, {}, true, false %>
-  <%= f.submit "Update" %>
-<% end %>
+<%= render "form", task: @task %>
 
 <%= link_to "Back to the list", tasks_path %>

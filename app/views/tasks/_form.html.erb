@@ -1,0 +1,14 @@
+<% if @task.id %>
+  <%= simple_form_for(@task) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :detail %>
+    <%= f.input :completed %>
+    <%= f.submit %>
+  <% end %>
+<% else %>
+  <%= simple_form_for(@task) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :detail %>
+    <%= f.submit %>
+  <% end %>
+<% end %>
