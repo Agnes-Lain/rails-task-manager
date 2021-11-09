@@ -3,10 +3,11 @@
 <ul class="list-group list-group-flush">
   <% @tasks.each do |task| %>
     <li class="list-group-item"><%= task.completed ? "✅" : "❎" %> --- <%= link_to task.title, task_path(task) %>
-    <%= link_to "🗑",
-              task_path(task),
+    <%= link_to task_path(task),
               method: :delete,
-              data: { confirm: "Are you sure?" } %>
+              data: { confirm: "Are you sure?" } do %>
+              <i class="fas fa-trash-alt"></i>
+              <% end %>
     </li>
   <% end %>
 </ul>
